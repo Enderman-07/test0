@@ -1,0 +1,58 @@
+body {
+    margin: 0;/*外边距*/
+    padding: 0; /*内边距*/
+}
+header{  
+    background-color: #333;  /*背景颜色*/
+    color: white;  /*字体颜色*/
+    font-size: 30px;
+    padding: 20px; 
+    text-align: center;  /*文字位置*/
+}  
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #bbbbbb;
+    text-align: center;
+}
+
+
+.container {
+    padding-left: 0px;
+
+    width: 100%;
+    height: 500px;
+
+}
+
+.left{
+    text-align: right;
+    float: left;
+    width: 40%;
+    height: 100%;
+    background-color:  #92c7ff;
+    
+    button{
+        background-color: bisque;
+        border: 1px solid  #ff9292; /* 边框：1像素宽，实线 */  
+        padding: 10px; /* 内边距：10像素 */  
+        margin-right: 20px;
+        color: #00236d;
+        font-size: 18px;
+    }
+}
+.right {
+    float: left;
+    width: 60%;
+    height: 500px;
+    background-color: #ff9292;
+    margin-right: -100%;
+    .ct{
+        background-color: bisque;
+        border: 1px solid  #92c7ff; /* 边框：1像素宽，实线 */  
+        padding: 10px; /* 内边距：10像素 */  
+        margin: 10px; /* 外边距：10像素 */  
+        color: #00236d;
+        font-size: 18px;
+    }
+}
