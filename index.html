@@ -34,17 +34,28 @@
             
         <div id="json-data">123</div>  
         <script>  
-        fetch('https://raw.githubusercontent.com/Enderman-07/test0/main/test0.json')  
-            .then(response => response.json())  
-            .then(data => {  
-                // 处理JSON数据，例如将其显示在网页上  
-                const jsonDataElement = document.getElementById('json-data');  
-                jsonDataElement.textContent = JSON.stringify(data, null, 2); // 格式化显示  
-                // 或者，你可以根据数据内容自定义显示方式  
-            })  
-            .catch(error => {  
-                console.error('Error fetching JSON data:', error);  
-            });  
+       // 通过AJAX加载JSON文件
+        function loadJSON(callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'data/test0.json', true);
+        xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+            }
+        };
+        xobj.send(null);
+        }
+
+        // 在页面上显示JSON数据
+        function displayData(data) {
+        var jsonData = JSON.parse(data);
+        var container = document.getElementById('data-container');
+        container.innerHTML = JSON.stringify(jsonData, null, 2);
+        }
+
+        // 加载并显示JSON数据
+        loadJSON(displayData);
         </script>  
         </div>   
         </div>
