@@ -30,7 +30,23 @@
             <p id="demo3" class="ct">点击按钮C，生成两个100以内随机数组</p>
             <p><br></p>
             <p id="demo4" class="ct">点击按钮D，将C中数据合并排序</p>
-        </div>
+
+            
+        <div id="json-data"></div>  
+        <script>  
+        fetch('https://raw.githubusercontent.com/Enderman-07/test0/main/test0.json')  
+            .then(response => response.json())  
+            .then(data => {  
+                // 处理JSON数据，例如将其显示在网页上  
+                const jsonDataElement = document.getElementById('json-data');  
+                jsonDataElement.textContent = JSON.stringify(data, null, 2); // 格式化显示  
+                // 或者，你可以根据数据内容自定义显示方式  
+            })  
+            .catch(error => {  
+                console.error('Error fetching JSON data:', error);  
+            });  
+        </script>  
+        </div>   
         </div>
     </div>
     <footer>[这是一个web作业]</footer><!--footer部分-->
