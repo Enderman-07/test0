@@ -38,7 +38,7 @@
             function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'data.json', true);
+    xobj.open('GET', 'output.json', true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(xobj.responseText);
@@ -51,7 +51,7 @@
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container = document.getElementById('data-container');
-    container.innerHTML = JSON.stringify(jsonData, null, 2);
+    container.innerHTML = JSON.stringify(jsonData[0], null, 2);
 }
 
 // 加载并显示JSON数据
