@@ -50,14 +50,14 @@
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container = document.getElementById('data-container');
-    container.innerHTML = '运行内存:'+JSON.parse(jsonData[0]['运行内存'])+'<br>CPU型号:'+JSON.parse(jsonData[0]['CPU型号']);
+    container.innerHTML = '运行内存:'+jsonData[0]['运行内存']+'<br>CPU型号:'+jsonData[0]['CPU型号'];
 }
 
 // 加载并显示JSON数据
 loadJSON(displayData);
         </script>
             <h1>Read JSON Example</h1>
-            <p id="data-container"></p>
+            <div id="data-container"></div>
         </div>   
         </div>
     </div>
