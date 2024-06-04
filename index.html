@@ -5,41 +5,7 @@
     <meta charset="UTF-8">
     <title>实验二</title><!--标题-->
     <link rel="stylesheet" type="text/css" href="实验二.css"><!--链接.css文件-->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <script>
-        d3.csv("data.csv").then(function(data) {
-            displayData(data);
-        });
-
-        function displayData(data) {
-            var table = d3.select("body")
-                .append("table");
-
-            var thead = table.append("thead");
-            var tbody = table.append("tbody");
-
-            thead.append("tr")
-                .selectAll("th")
-                .data(data.columns)
-                .enter()
-                .append("th")
-                .text(function(column) { return column; });
-
-            var rows = tbody.selectAll("tr")
-                .data(data)
-                .enter()
-                .append("tr");
-
-            var cells = rows.selectAll("td")
-                .data(function(row) {
-                    return Object.values(row);
-                })
-                .enter()
-                .append("td")
-                .text(function(d) { return d; });
-        }
-    </script>
 </head>
 
 <body>
@@ -66,6 +32,31 @@
             <p><br></p>
             <p id="demo4" class="ct">点击按钮D，将C中数据合并排序</p>
 
+            <h1>Read JSON Example</h1>
+            <div id="data-container"></div>
+        <script>
+            function loadJSON(callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', 'data/file.json', true);
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.responseText);
+        }
+    };
+    xobj.send(null);
+}
+
+// 在页面上显示JSON数据
+function displayData(data) {
+    var jsonData = JSON.parse(data);
+    var container = document.getElementById('data-container');
+    container.innerHTML = JSON.stringify(jsonData, null, 2);
+}
+
+// 加载并显示JSON数据
+loadJSON(displayData);
+        </script>
         </div>   
         </div>
     </div>
