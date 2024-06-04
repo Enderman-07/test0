@@ -50,7 +50,7 @@
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container = document.getElementById('data-container');
-    container.innerHTML = JSON.stringify('运行内存'+jsonData[0]['运行内存']+'CPU型号'+jsonData[0]['CPU型号'], null, 2);
+    container.innerHTML = JSON.stringify('运行内存:'+jsonData[0]['运行内存']+'\nCPU型号:'+jsonData[0]['CPU型号'], null, 2);
 }
 
 // 加载并显示JSON数据
