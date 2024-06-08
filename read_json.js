@@ -14,6 +14,7 @@ function loadJSON(callback) {
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container1 = document.getElementById('parameter1');
+    container1.innerHTML = '内存:' + jsonData[0]['内存'] + '<br>CPU型号:' + jsonData[0]['CPU型号'];
     var phone = getURL()
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone) {
@@ -22,6 +23,7 @@ function displayData(data) {
         }
     }
     var container2 = document.getElementById("parameter2");
+    container2.innerHTML = '内存:' + jsonData[0]['内存'] + '<br>CPU型号:' + jsonData[0]['CPU型号'];
     var phone2 = document.getElementById("phones").value;
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone2) {
