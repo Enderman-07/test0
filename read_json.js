@@ -13,11 +13,19 @@ function loadJSON(callback) {
 // 在页面上显示JSON数据
 function displayData(data) {
     var jsonData = JSON.parse(data);
-    var container = document.getElementById('parameter1');
+    var container1 = document.getElementById('parameter1');
     var phone = getCookie();
     for(let i=0;i<jsonData.length();++i){
         if(json[i]["机型"]==phone){
-            container.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
+            container1.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
+            break;
+        } 
+    }
+    var container2 = document.getElementById('parameter2');
+    var phone2 = document.getElementById('phone').value;
+    for(let i=0;i<jsonData.length();++i){
+        if(json[i]["机型"]==phone2){
+            container2.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
             break;
         } 
     }
