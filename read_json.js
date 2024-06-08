@@ -22,7 +22,7 @@ function displayData(data) {
         } 
     }
     var container2 = document.getElementById('parameter2');
-    var phone2 = document.getElementById('phone').value;
+    var phone2 = document.getElementById('phones').value;
     for(let i=0;i<jsonData.length();++i){
         if(json[i]["机型"]==phone2){
             container2.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
