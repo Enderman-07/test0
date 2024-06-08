@@ -49,19 +49,20 @@
         <div class="left"><!--left部分-->
             <!-- 下拉列表 -->
             <div>
+                <script>changeImage1()</script>
                 <label id="lab" for="phones">
                     <p>选择一手机型号:</p>
                 </label>
                 <select id="phones" name="phones" onchange="changeImage1()">
                     <option value="占位">占位</option>
                 </select>
-                <script>setvalue()</script>
             </div>
             <div>
                 <img id="PhoneImage" src="temp1.png" alt="Phone Image" width="300" height="300">
             </div>
             <div>
-                <a href="index2.html" class="button-link" target="_blank">详细参数</a> 
+                <a href="#" class="button-link" onclick="goToPage2(event)">详细参数</a> 
+                <script>goToPage2()</script>
             </div>
         </div>
         <div class="right"><!--right部分-->

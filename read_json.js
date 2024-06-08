@@ -1,4 +1,3 @@
-var phone='';
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -15,7 +14,7 @@ function loadJSON(callback) {
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container1 = document.getElementById('parameter1');
-    var phone = phone;
+    var phone = getURL()
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone) {
             container1.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
@@ -48,7 +47,21 @@ function change_opt(data) {
 }
 
 
-function setvalue() {
-    var p = document.getElementById("phones").value;
-    phone=p;
+
+
+function goToPage2(event) {
+    event.preventDefault(); // 阻止默认的链接跳转行为  
+    var value = document.getElementById("phones").value;
+    var url = 'index2.html?value=' + encodeURIComponent(value);
+    window.open(url, '_blank'); // 在新标签页中打开URL  
+}
+
+
+function getURL() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var value = urlParams.get('value');
+    if (inputValue) {
+        return value;
+    }
+    return null;
 }
