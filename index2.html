@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="page2.css"><!--链接.css文件-->
     <script src="read_json.js"></script>
     <script>loadJSON(change_opt)</script>
-    <script>loadJSON(displayData)</script>
 </head>
 
 <body>
@@ -49,13 +48,13 @@
 
         <!-- 下拉列表 -->
         <div>
-            <script>loadJSON(displayData)</script>
             <label id="lab" for="phones">
                 <p>选择一手机型号对比:</p>
             </label>
             <select id="phones" name="phones"  onchange="loadJSON(displayData)">
                 <option value="占位">占位</option>
             </select>
+            <script>loadJSON(displayData)</script>
         </div>
     </div>
     <div class="container">
@@ -77,8 +76,8 @@
                 ```
             </div>
         </div>
-    </div>
-
+    </div>            
+    <script>loadJSON(displayData)</script>
 
     <footer>[本页面内容由购物平台用户评价分析所得，仅供参考]</footer><!--footer部分-->
 </body>
