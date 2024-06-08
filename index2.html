@@ -6,11 +6,10 @@
     <title>
         软工课设标题
     </title><!--标题-->
-    <link rel="stylesheet" type="text/css" href="page1.css"><!--链接.css文件-->
-    <script src="change_img.js"></script>
+    <link rel="stylesheet" type="text/css" href="page2.css"><!--链接.css文件-->
     <script src="read_json.js"></script>
-
     <script>loadJSON(change_opt)</script>
+    <script>loadJSON(displayData)</script>
 </head>
 
 <body>
@@ -46,34 +45,37 @@
         </div>
         </div>
     </header><!--header部分-->
+    <div class="up">
+        <!-- 下拉列表 -->
+        <div>
+            <label id="lab" for="phones">
+                <p>选择一手机型号对比:</p>
+            </label>
+            <select id="phones" name="phones" onchange="changeImage1()">
+                <option value="占位">占位</option>
+            </select>
+        </div>
+    </div>
     <div class="container">
-        <div class="left"><!--left部分-->
-            <!-- 下拉列表 -->
+        <div class="left">
             <div>
-                <label id="lab" for="phones">
-                    <p>选择一手机型号:</p>
-                </label>
-                <select id="phones" name="phones" onchange="changeImage1()">
-                    <option value="占位">占位</option>
-                </select>
-                <script>setCookie()</script>
-            </div>
-            <div>
-                <img id="PhoneImage" src="temp1.png" alt="Phone Image" width="300" height="300">
-            </div>
-            <div>
-                <a href="index2.html" class="button-link" target="_blank">详细参数</a> 
+                手机参数表1
+                <p id="parameter1"></p>
+                <br>
+                <br>
+                ```
             </div>
         </div>
         <div class="right"><!--right部分-->
             <div>
-                <button class="opt_btn" id="merits" onclick="changeImage2()">优点词云</button>
-                <button class="opt_btn" id="demerits" onclick="changeImage3()">缺点词云</button>
+                手机参数表2
+                <p id="parameter2"></p>
+                <br>
+                <br>
+                ```
             </div>
-            <img id="text" src="temp2.png" alt="text" width="600" height="375">
         </div>
     </div>
+
     <footer>[本页面内容由购物平台用户评价分析所得，仅供参考]</footer><!--footer部分-->
 </body>
-
-</html>
