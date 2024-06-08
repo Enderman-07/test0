@@ -1,3 +1,4 @@
+var phone='';
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -14,20 +15,20 @@ function loadJSON(callback) {
 function displayData(data) {
     var jsonData = JSON.parse(data);
     var container1 = document.getElementById('parameter1');
-    var phone = getvalue();
-    for(let i=0;i<jsonData.length;++i){
-        if(jsonData[i]["机型"]==phone){
+    var phone = phone;
+    for (let i = 0; i < jsonData.length; ++i) {
+        if (jsonData[i]["机型"] == phone) {
             container1.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
             break;
-        } 
+        }
     }
     var container2 = document.getElementById("parameter2");
     var phone2 = document.getElementById("phones").value;
-    for(let i=0;i<jsonData.length;++i){
-        if(jsonData[i]["机型"]==phone2){
+    for (let i = 0; i < jsonData.length; ++i) {
+        if (jsonData[i]["机型"] == phone2) {
             container2.innerHTML = '内存:' + jsonData[i]['内存'] + '<br>CPU型号:' + jsonData[i]['CPU型号'];
             break;
-        } 
+        }
     }
 }
 
@@ -46,15 +47,8 @@ function change_opt(data) {
     });
 }
 
-function setvalue() {
-    var phone = document.getElementById("phones").value;
-    localStorage.setItem('phone',phone);
-}
 
-function getvalue() {
-    var value = localStorage.getItem('phone');  
-    if (value) {
-        return value;
-    }
-    return null;
+function setvalue() {
+    var p = document.getElementById("phones").value;
+    phone=p;
 }
