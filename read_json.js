@@ -31,13 +31,12 @@ function displayData(data) {
     }
 }
 
-
 function change_opt(data) {
     var jsonData = JSON.parse(data);
-    // 清空select元素中的现有选项  
+    // 清空select元素中的现有选项
     document.getElementById('phones').innerHTML = '';
 
-    // 遍历API返回的选项列表，并添加到select元素中  
+    // 遍历API返回的选项列表，并添加到select元素中
     jsonData.forEach(option => {
         let opt = document.createElement('option');
         opt.value = option['机型'];
@@ -47,10 +46,8 @@ function change_opt(data) {
 }
 
 
-
-
 function goToPage2(event) {
-    event.preventDefault(); // 阻止默认的链接跳转行为  
+    event.preventDefault(); // 阻止默认的链接跳转行为
     var value = document.getElementById("phones").value;
     var url = 'index2.html?value=' + encodeURIComponent(value);
     window.open(url, '_blank'); // 在新标签页中打开URL  
@@ -60,7 +57,7 @@ function goToPage2(event) {
 function getURL() {
     var urlParams = new URLSearchParams(window.location.search);
     var value = urlParams.get('value');
-    if (Value) {
+    if (value) {
         return value;
     }
     return null;
