@@ -56,9 +56,6 @@ function goToPage2(event) {
 
 function getURL() {
     var urlParams = new URLSearchParams(window.location.search);
-    var value = urlParams.get('value');
-    if (value) {
-        return value;
-    }
-    return null;
+    var v = urlParams.get('value');
+    return v;
 }
