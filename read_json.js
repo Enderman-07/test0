@@ -46,16 +46,15 @@ function change_opt(data) {
     });
 }
 
-
-function setvalue() {  
+function setvalue() {
     var phone = document.getElementById("phones").value;
-    localStorage.setItem('phone',phone);  
-}  
+    localStorage.setItem('phone',phone);
+}
 
-function getvalue() {  
+function getvalue() {
     var value = localStorage.getItem('phone');  
-    if (value) {  
+    if (value) {
         return value;
-    }  
+    }
     return null;
-} 
+}
