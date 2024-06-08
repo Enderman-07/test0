@@ -13,7 +13,7 @@ function loadJSON(callback) {
 // 在页面上显示JSON数据
 function displayData(data) {
     var jsonData = JSON.parse(data);
-    var container = document.getElementById('parameter');
+    var container = document.getElementById('parameter1');
     var phone = getCookie();
     for(let i=0;i<jsonData.length();++i){
         if(json[i]["机型"]==phone){
