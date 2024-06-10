@@ -13,13 +13,15 @@ function loadJSON(callback) {
 // 在页面上显示JSON数据
 function displayData(data) {
     var jsonData = JSON.parse(data);
+
     var container1 = document.getElementById('parameter1');
     var phone = getURL()
+    var p1 = document.getElementById('phone1');
+    p1.innerHTML = phone;
     container1.innerHTML = phone;
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone) {
-            container1.innerHTML = '品牌' + jsonData[i]['品牌']
-                + '<br>CPU型号:' + jsonData[i]['CPU型号']
+            container1.innerHTML =  '<br>CPU型号:' + jsonData[i]['CPU型号']
                 + '<br>内存:' + jsonData[i]['内存']
                 + '<br>机身颜色:' + jsonData[i]['机身颜色']
                 + '<br>是否支持IPv6:' + jsonData[i]['支持IPv6']
@@ -37,11 +39,11 @@ function displayData(data) {
     }
     var container2 = document.getElementById("parameter2");
     var phone2 = document.getElementById("phones").value;
+    var p2 = document.getElementById('phone2');
+    p2.innerHTML = phone2;
     container2.innerHTML = phone2;
     for (let i = 0; i < jsonData.length; ++i) {
-        if (jsonData[i]["机型"] == phone2) {
-            container2.innerHTML = '品牌' + jsonData[i]['品牌']
-            + '<br>CPU型号:' + jsonData[i]['CPU型号']
+        if (jsonData[i]["机型"] == phone2) {'<br>CPU型号:' + jsonData[i]['CPU型号']
             + '<br>内存:' + jsonData[i]['内存']
             + '<br>机身颜色:' + jsonData[i]['机身颜色']
             + '<br>是否支持IPv6:' + jsonData[i]['支持IPv6']
@@ -62,9 +64,10 @@ function displayData(data) {
 
 function change_opt(data) {
     var jsonData = JSON.parse(data);
-    // 清空select元素中的现有选项  
-    document.getElementById('phones').innerHTML = '';
-
+    var select = document.getElementById('phones');  
+    while (select.options.length > 1) { 
+        select.remove(1); // 移除除空白项外的第一个选项  
+    }
     // 遍历API返回的选项列表，并添加到select元素中  
     jsonData.forEach(option => {
         let opt = document.createElement('option');

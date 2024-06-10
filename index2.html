@@ -53,15 +53,14 @@
                 <p>选择一手机型号对比:</p>
             </label>
             <select id="phones" name="phones" onchange="loadJSON(displayData)">
-                <option value="vivo">vivo</option>
-                <option value="占位">占位</option>
+                <option value="占位">请选择一款手机进行比对</option>
             </select>
         </div>
     </div>
     <div class="container">
         <div class="left">
             <div>
-                手机参数表1
+                <p id="phone1"></p>
                 <p id="parameter1"></p>
                 <br>
                 <br>
@@ -71,6 +70,7 @@
         <div class="right"><!--right部分-->
             <div>
                 手机参数表2
+                <p id="phone2"></p>
                 <p id="parameter2"></p>
                 <br>
                 <br>
