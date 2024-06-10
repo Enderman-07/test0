@@ -15,6 +15,7 @@ function displayData(data) {
     var jsonData = JSON.parse(data);
     var container1 = document.getElementById('parameter1');
     var phone = getURL()
+    container1.innerHTML = phone;
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone) {
             container1.innerHTML = '品牌' + jsonData[i]['品牌']
@@ -36,6 +37,7 @@ function displayData(data) {
     }
     var container2 = document.getElementById("parameter2");
     var phone2 = document.getElementById("phones").value;
+    container2.innerHTML = phone2;
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone2) {
             container2.innerHTML = '品牌' + jsonData[i]['品牌']
