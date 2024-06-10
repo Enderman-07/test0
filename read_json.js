@@ -11,7 +11,7 @@ function loadJSON(callback) {
 }
 
 // 在页面上显示JSON数据
-function displayData(data) {
+function displayData1(data) {
     var jsonData = JSON.parse(data);
 
     var container1 = document.getElementById('parameter1');
@@ -37,6 +37,8 @@ function displayData(data) {
             break;
         }
     }
+}
+function displayData2(data) {
     var container2 = document.getElementById("parameter2");
     var phone2 = document.getElementById("phones").value;
     var p2 = document.getElementById('phone2');

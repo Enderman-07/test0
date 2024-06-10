@@ -45,14 +45,14 @@
         </div>
     </header><!--header部分-->
     <div class="up">
-
+        <script>loadJSON(displayData1)</script>
         <!-- 下拉列表 -->
         <div>
             <script>displayData()</script>
             <label id="lab" for="phones">
                 <p>选择一手机型号对比:</p>
             </label>
-            <select id="phones" name="phones" onchange="loadJSON(displayData)">
+            <select id="phones" name="phones" onchange="loadJSON(displayData2)">
                 <option value="占位" disabled selected>请选择一款手机进行比对</option>
             </select>
         </div>
@@ -69,7 +69,6 @@
         </div>
         <div class="right"><!--right部分-->
             <div>
-                手机参数表2
                 <p id="phone2"></p>
                 <p id="parameter2"></p>
                 <br>
