@@ -39,6 +39,7 @@ function displayData1(data) {
     }
 }
 function displayData2(data) {
+    var jsonData = JSON.parse(data);
     var container2 = document.getElementById("parameter2");
     var phone2 = document.getElementById("phones").value;
     var p2 = document.getElementById('phone2');
