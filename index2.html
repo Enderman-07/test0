@@ -48,13 +48,14 @@
 
         <!-- 下拉列表 -->
         <div>
+            <script>displayData()</script>
             <label id="lab" for="phones">
                 <p>选择一手机型号对比:</p>
             </label>
-            <select id="phones" name="phones"  onchange="loadJSON(displayData)">
+            <select id="phones" name="phones" onchange="displayData()">
+                <option value="vivo">vivo</option>
                 <option value="占位">占位</option>
             </select>
-            <script>loadJSON(displayData)</script>
         </div>
     </div>
     <div class="container">
@@ -76,8 +77,8 @@
                 ```
             </div>
         </div>
-    </div>            
-    <script>loadJSON(displayData)</script>
+    </div>
+
 
     <footer>[本页面内容由购物平台用户评价分析所得，仅供参考]</footer><!--footer部分-->
 </body>
