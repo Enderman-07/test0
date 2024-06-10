@@ -21,7 +21,7 @@ function displayData1(data) {
     container1.innerHTML = phone;
     for (let i = 0; i < jsonData.length; ++i) {
         if (jsonData[i]["机型"] == phone) {
-            container1.innerHTML =  '<br>CPU型号:' + jsonData[i]['CPU型号']
+            container1.innerHTML =  'CPU型号:' + jsonData[i]['CPU型号']
                 + '<br>内存:' + jsonData[i]['内存']
                 + '<br>机身颜色:' + jsonData[i]['机身颜色']
                 + '<br>是否支持IPv6:' + jsonData[i]['支持IPv6']
@@ -46,19 +46,20 @@ function displayData2(data) {
     p2.innerHTML = phone2;
     container2.innerHTML = phone2;
     for (let i = 0; i < jsonData.length; ++i) {
-        if (jsonData[i]["机型"] == phone2) {'<br>CPU型号:' + jsonData[i]['CPU型号']
-            + '<br>内存:' + jsonData[i]['内存']
-            + '<br>机身颜色:' + jsonData[i]['机身颜色']
-            + '<br>是否支持IPv6:' + jsonData[i]['支持IPv6']
-            + '<br>屏幕材质:' + jsonData[i]['屏幕材质']
-            + '<br>特质:' + jsonData[i]['特征特质'] + ';' + jsonData[i]['网络支持.5G网络']
-            + '<br>屏幕分辨率:' + jsonData[i]['屏幕分辨率']
-            + '<br>基本信息:' + jsonData[i]['基本信息.机身尺寸'] + ';' + jsonData[i]['基本信息.机身重量']
-            + '<br>屏幕:' + jsonData[i]['屏幕.屏幕尺寸'] + ';' + jsonData[i]['屏幕.屏幕刷新率']
-            + '<br>电池:' + jsonData[i]['电池信息.充电功率'] + ';' + jsonData[i]['电池信息.电池容量']
-            + '<br>操作系统:' + jsonData[i]['操作系统.系统']
-            + '<br>网络:' + jsonData[i]['网络支持.5G网络'] + ';' + jsonData[i]['网络支持.SIM卡类型'] + ';' + jsonData[i]['网络支持.双卡机类型']
-            + '<br>摄像头: 前摄' + jsonData[i]['前摄主像素'] + ';后摄' + jsonData[i]['后摄主像素'] + '/' + jsonData[i]['后摄2-超广角像素'] + '/' + jsonData[i]['后摄3-tele像素'];
+        if (jsonData[i]["机型"] == phone2) {
+            container2.innerHTML =  'CPU型号:' + jsonData[i]['CPU型号']
+                + '<br>内存:' + jsonData[i]['内存']
+                + '<br>机身颜色:' + jsonData[i]['机身颜色']
+                + '<br>是否支持IPv6:' + jsonData[i]['支持IPv6']
+                + '<br>屏幕材质:' + jsonData[i]['屏幕材质']
+                + '<br>特质:' + jsonData[i]['特征特质'] + ';' + jsonData[i]['网络支持.5G网络']
+                + '<br>屏幕分辨率:' + jsonData[i]['屏幕分辨率']
+                + '<br>基本信息:' + jsonData[i]['基本信息.机身尺寸'] + ';' + jsonData[i]['基本信息.机身重量']
+                + '<br>屏幕:' + jsonData[i]['屏幕.屏幕尺寸'] + ';' + jsonData[i]['屏幕.屏幕刷新率']
+                + '<br>电池:' + jsonData[i]['电池信息.充电功率'] + ';' + jsonData[i]['电池信息.电池容量']
+                + '<br>操作系统:' + jsonData[i]['操作系统.系统']
+                + '<br>网络:' + jsonData[i]['网络支持.5G网络'] + ';' + jsonData[i]['网络支持.SIM卡类型'] + ';' + jsonData[i]['网络支持.双卡机类型']
+                + '<br>摄像头: 前摄' + jsonData[i]['前摄主像素'] + ';后摄' + jsonData[i]['后摄主像素'] + '/' + jsonData[i]['后摄2-超广角像素'] + '/' + jsonData[i]['后摄3-tele像素'];
             break;
         }
     }
