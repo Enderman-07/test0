@@ -11,20 +11,20 @@ function changeImage1() {
 function changeImage2() {
     var phone = document.getElementById("phones").value; // 获取下拉列表的值  
     var image = document.getElementById("text"); // 获取图片元素  
-    image.src = "./word_cloud/" + phone + "/" + phone + "_keywords.jpg";
+    image.src = "./word_cloud/" + phone + "/" + phone + "_keywords.png";
 }
 //情绪统计
 function changeImage3() {
     var phone = document.getElementById("phones").value; // 获取下拉列表的值  
     var image = document.getElementById("text"); // 获取图片元素  
-    image.src = "./word_cloud/" + phone + "/" + phone + "_emotion_analysis.jpg";
+    image.src = "./word_cloud/" + phone + "/" + phone + "_emotion_analysis.png";
 }
 
 //好评差评统计
 function changeImage4() {
     var phone = document.getElementById("phones").value; // 获取下拉列表的值  
     var image = document.getElementById("text"); // 获取图片元素  
-    image.src = "./word_cloud/" + phone + "/" + phone + "_feedback.jpg";
+    image.src = "./word_cloud/" + phone + "/" + phone + "_feedback.png";
 }
 
 
